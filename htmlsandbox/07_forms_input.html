@@ -12,16 +12,17 @@
             <!-- you want the for= on label to be same value as id= so they are connected when clicking into it -->
             <!-- name= is used on server side like Column Name -->
             <label for="name">Name</label><br>
-            <input type="text" id="name" name="name">
+            <input type="text" id="name" name="name" value="John Doe">
         </div>
         <div>
             <label for="email">Email</label><br>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" placeholder="Enter an email">
         </div>
         <div>
             <label for="message">Message</label>
             <textarea name="message" id="message" cols="40" rows="3"></textarea>
         </div>
+        <!-- dropdown -->
         <div>
             <label for="sex"></label>
             <select name="sex" id="sex">
@@ -30,10 +31,36 @@
                 <option value="other">Other</option>
             </select>
         </div>
+        <!-- number -->
         <div>
             <label for="age">Age</label><br>
             <input type="number" name="age" id="age">
         </div>
-        
+        <!-- date -->
+        <div>
+            <label for="birthdate">Birthdate</label><br>
+            <input type="date" name="birthdate" id="birthdate">
+        </div>
+        <!-- radio -->
+        <div>
+            <label for="membership">Membership</label><br>
+            <input type="radio" name="membership" value="simple" id="membership"> Simple
+            <input type="radio" name="membership" value="standard" checked id="membership"> Standard
+            <input type="radio" name="membership" value="super" id="membership"> Super
+        </div>
+        <!-- checkbox -->
+        <div>
+            <label for="checkbox">I like</label>
+            <input type="checkbox" name="likes" value="bike" id="likes"> Bike
+            <input type="checkbox" name="likes" value="car" checked id="likes"> Cars
+            <input type="checkbox" name="likes" value="boat" id="likes"> Boats
+        </div>
+        <!-- input submit -->
+        <input type="submit" value="Submit">
+
+        <!-- using button tag -->
+        <!-- <button type="submit">Submit</button> -->
+
+        <button type="reset">Reset</button>
 </body>
 </html>
