@@ -6,10 +6,68 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Inline & Block Styling</title>
   <style>
-   
+
+   li {
+     display: inline;
+
+   }
+
+   li a {
+     padding-right: 20px;
+   }
+
+   img {
+     /* Can't do margin:auto on inline element... must be block */
+     display: block;
+     margin: auto;
+   }
+
+.box {
+  width: 33%;
+
+  /* box-sizing makes it so that padding does not add to the width */
+  box-sizing: border-box;
+
+  /* with display: inline:  width, height, margin-top and margin-bottom, float have no effect */
+  /* display: inline; */
+
+  /* Goes horizontal but also allows to add width, height, margin top-bottom and float */
+  display: inline-block;
+  background: #f4f4f4;
+  padding: 20px;
+  margin-bottom: 15px;
+
+}
   </style>
 </head>
 <body>
   
+  <ul>
+    <li><a href="#">Technology</a></li>
+    <li><a href="#">Business</a></li>
+    <li><a href="#">Fashion</a></li>
+  </ul>
+
+  <br>
+  <br>
+
+  <img src="./img/leaf.png" alt="My Image">
+
+  <br>
+  <br>
+
+  <div class="box">
+    <h3>Heading</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum neque expedita consequuntur ratione nihil molestiae sint error delectus repudiandae in.</p>
+  </div>
+  <div class="box">
+    <h3>Heading</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum neque expedita consequuntur ratione nihil molestiae sint error delectus repudiandae in.</p>
+  </div>
+  <div class="box">
+    <h3>Heading</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum neque expedita consequuntur ratione nihil molestiae sint error delectus repudiandae in.</p>
+  </div>
+
 </body>
 </html>
