@@ -11,7 +11,6 @@
     />
     <style>
       * {
-        font-family: Raleway;
         box-sizing: border-box;
         margin: 0;
         padding: 0;
@@ -22,7 +21,11 @@
       }
 
       body {
+        font-family: Raleway;
         background: #344a72;
+        /* He set color and line-height here... I did further down */
+        /* color: #fff;   */
+        /* line-height: 1.8; */
         /* 
           -Background color is #344a72
         */
@@ -40,6 +43,8 @@
         max-width: 450px;
         margin: auto;
         padding: 35px 15px;
+        /* He set margin like this */
+        /* margin: 30px auto; */
 
         /* 
         -Remember, margin: auto on left and right will center a block element 
@@ -71,6 +76,7 @@
       }
       .form-wrap .form-group {
         padding-bottom: 20px;
+        /* He did margin-top: 15px */
         /* 
           Each label, input is wrapped in .form-group
         */
@@ -88,7 +94,7 @@
       }
 
       .form-wrap .form-group input {
-        display: block;
+        /* display: block; */
         width: 100%;
         height: 3em;
         padding: 0 10px;
@@ -107,6 +113,8 @@
         color: white;
         border-radius: 5px;
         border: none;
+        cursor: pointer;
+
         /* 
           Button should wrap accross 100% and display as block
           Background color for button is #49c1a2
