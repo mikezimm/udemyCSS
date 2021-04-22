@@ -1,0 +1,43 @@
+
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+
+    /* Do this so padding on box doesn't add to width of the box. */
+    box-sizing: border-box;
+}
+
+/* Main - core elements of the page */
+
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7em;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    padding-bottom: 20px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+/* Navbar */
+
+#navbar {
+    background: #333;
+    color: white;
+    /* overflow: auto so background shows no matter what */
+    overflow: auto;
+}
+
+#navbar a {
+    color: white;
+}
