@@ -22,7 +22,7 @@ a {
 }
 
 h1, h2, h3 {
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
 }
 
 p {
@@ -34,10 +34,80 @@ p {
 #navbar {
     background: #333;
     color: white;
+
     /* overflow: auto so background shows no matter what */
     overflow: auto;
+
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+#navbar .logo {
+    float: left;
+}
+#navContainer {
+max-width: 700px;
+display: block;
+margin: auto;
+}
+
+#navbar ul {
+    list-style: none;
+}
+  
+#navbar li {
+    float: right;
+
+    /* This is the wrong place to put padding... should be on the link  */
+    /* padding: 15px 20px; */
 }
 
 #navbar a {
+    display: block;
     color: white;
+
+    /* Put padding on the link, not the li or the hover color only is around the text, not the larger button of the link */
+    padding: 15px 20px;
+}
+
+.fontHighlight {
+    color: rgb(255, 191, 132);
+}
+
+#navbar li a:hover {
+    background-color: #444;
+    color: rgb(255, 191, 132);
+}
+
+.indexMain {
+    background: url('../img/showcase.jpg') no-repeat center center/cover ;
+    height: 600px;
+    text-align: center;
+    color: #fff;
+}
+
+.indexMain h1 {
+    font-size: 50px;
+    margin-bottom: 40px;
+    padding-top: 200px;
+}
+
+.indexMain p {
+    font-size: large;
+
+    margin-bottom: 40px;
+    /* font-weight: ; */
+}
+
+.indexMain a {
+    /* display: block; */
+    color: white;
+    background: #333;
+    /* Put padding on the link, not the li or the hover color only is around the text, not the larger button of the link */
+    padding: 15px 20px;
+}
+  
+.indexMain a:hover {
+    background-color: #444;
+    color: rgb(255, 191, 132);
 }
