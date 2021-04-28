@@ -22,7 +22,7 @@ a {
 }
 
 h1, h2, h3 {
-    /* padding-bottom: 20px; */
+    padding-bottom: 20px;
 }
 
 p {
@@ -31,9 +31,14 @@ p {
 
 /* Utility Classes */
 .container {
+    /* margin: auto;
     max-width: 1100px;
-    display: block;
+    display: block; <<== This totally messes it up!*/ 
+
     margin: auto;
+    max-width: 1100px;
+    overflow: auto;
+    padding: 0 20px;
 }
 
 .text-primary {
@@ -85,6 +90,14 @@ p {
     clear: both;
 }
 
+.l-heading {
+    font-size: 40px;
+}
+/* padding */
+.py-1 { padding: 10px 0; }
+.py-2 { padding: 20px 0; }
+.py-3 { padding: 30px 0; }
+
 /* Navbar */
 
 #navbar {
@@ -92,6 +105,7 @@ p {
     color: white;
     /* overflow: auto so background shows no matter what */
     overflow: auto;
+    padding: 0px 30px;
 }
 
 #navbar a {
@@ -211,6 +225,61 @@ p {
     margin-bottom: 10px;
 }
 
+#about-info .info-right {
+    /* we want it to float left at 50% width,  */
+    float: right;
+    width: 50%;
+    /* Set min-height so it takes up the entire height of home-info */
+    min-height: 100%; 
+}
+
+#about-info .info-right img {
+    /* regular img are "inline" elements so you can't set height, width etc... you need to set to display block, then margin:auto */
+    /* by default images will break out of it's container so we need to set width to 100% of it's container whci is info-right */
+    display: block;
+    /* use margin auto to display in center of container */
+    margin: auto;
+    min-height: 100%; 
+    width: 70%;
+    border-radius: 50%;
+}
+
+#about-info .info-left {
+    /* we want it to float left at 50% width,  */
+        float: left;
+        width: 50%;
+        /* Set min-height so it takes up the entire height of home-info */
+        min-height: 100%;
+    }
+
+#testimonials {
+    height: 600px;
+    background: url('../img/test-bg.jpg') no-repeat center center/cover;
+    padding-top: 100px;
+}
+
+#testimonials h2 {
+    color: #fff;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+#testimonials .testimonial {
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    opacity: .9;
+}
+
+#testimonials .testimonial img {
+    /* If you float the picture left, the other elements float around it. */
+    float: left;
+    height: 100px;
+    /* add margin right to put gap between photo and text */
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
 #main-footer {
     background: #444;
     color: white;
@@ -218,3 +287,4 @@ p {
     /* This padding gives inner padding between this content and the children div */
     padding: 20px;
 }
+
