@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vh & Vw Units</title>
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Interesting thing about vh 100: */
+    /* 100vh will always be 100% of the current window height */
+    /* This means that you will see whatever is below the header as soon as you start scrolling down */
+    header {
+      background: #333 url('./jaanus-jagomagi-J0xQP4.jpg') 
+      no-repeat center center/cover;
+      color: white;
+
+      /* This will cover the entire page */
+      height: 100vh;
+      /* height: 75vh; */
+
+      /* Not really used much */
+      /* width: 50vw; */
+
+      text-align: center;
+      padding: 2rem;
+      padding-top: 10rem;
+
+    }
+
+
+    header h1 {
+      font-size: 3rem;
+    }
+
+    header p {
+      margin: 1rem 0;
+    }
+
+    .btn { 
+      /* inline-block sets to block, instead of default for link which is inline */
+      display: inline-block;  
+      /* Remove underline */
+      text-decoration: none;   
+      background: white;
+      color: #333;
+      padding: .75rem 2rem ;
+    }
+    section {
+      padding: 2rem;
+    }
+    
+    /* This will reduce padding when the height is smaller, like iphone rotated */
+    @media(max-height: 450px ) {
+      header {
+        padding-top: 5rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to our Website</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit fuga ullam aut amet, distinctio ad.</p>
+    <a href="" class="btn">Find out more</a>
+  </header>
+
+  <section>
+    <h3>About Our Company</h3>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores perferendis perspiciatis explicabo ea iusto assumenda architecto, odit debitis fuga amet nobis. Consequuntur ipsam cum sit iste, expedita eius eum velit.</p>
+  </section>
+</body>
+</html>
