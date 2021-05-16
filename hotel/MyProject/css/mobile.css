@@ -31,3 +31,46 @@
   float: none;
   width: 100%;
 }
+
+#showcase {
+  height: 100%;
+}
+
+#showcase .showcase-content {
+  padding: 30px;
+}
+
+#home-info .info-content {
+  padding: 30px 30px;
+}
+
+/* Boxes */
+.box {
+  float: none;
+  width: 100%;
+}
+
+#features {
+  height: 100%;
+}
+
+/* About Info */
+#about-info .info-right,
+#about-info .info-left {
+  float: none;
+  width: 100%;
+}
+
+.l-heading {
+  text-align: center;
+}
+
+#about-info .info-right {
+  margin-top: 30px;
+}
+
+/* Contact Form */
+#contact-info .box {
+  border-bottom: #444 1px dotted;
+}
+
