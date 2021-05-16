@@ -1,0 +1,33 @@
+
+
+#navbar .logo {
+  float: none;
+  text-align: center;
+}
+
+/* These are very specific */
+/* if in main you have #navbar ul li  */
+/* Then you must have the exact same syntax here */
+/* So in the case where we have #navbar ul li a, you need exact same thing here */
+#navbar ul, #navbar li {
+  float: none;
+}
+
+#navbar ul li a {
+  padding: 5px;
+  border-bottom: #444 dotted 1px;
+}
+
+#home-info {
+  height: 550px;
+}
+
+/* Home INFO */
+#home-info .info-img {
+  display: none;
+}
+
+#home-info .info-content {
+  float: none;
+  width: 100%;
+}
