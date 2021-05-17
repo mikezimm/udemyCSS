@@ -14,6 +14,12 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
+    .flex-container {
+      display: flex;
+      /* flex-direction: row; */
+      /* flex-wrap: wrap; */
+    } 
+
     .item {
       background: #f4f4f4;
       border: #ccc solid 2px;
@@ -21,15 +27,38 @@
       padding: 10px;
       text-align: center;
       border-radius: 10px;
-      width: 200px;
+
+      /* flex:  grow shrink basis */
+      flex: 1;
+    
+      /* width: 200px; */
     }
 
-    .flex-container {
-      display: flex;
+    .item-3 {
+      flex: 2;
     }
+
+    .item-1 {
+      /* Forces this one not to shrink */
+      /* flex-shrink: 0; */
+    }
+    .item-2 {
+      /* flex-grow: 1; */
+      /* flex-basis:  kind of like setting the width */
+      /* flex-basis: 0; */
+    }
+    .item-3 {
+      /* flex-grow: 2; */
+      /* flex-basis:  kind of like setting the width */
+      /* flex-basis: 0; */
+    }
+
+
+
+
   </style>
 </head>
-<body>
+<body ng-controller="testCtrl">
   <div class="flex-container">
     <div class="item item-1">
       <h3>Item 1 </h3>
