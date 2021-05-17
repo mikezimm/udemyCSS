@@ -309,6 +309,11 @@ p {
     border-color: #f7c08a;
 }
 
+.contact-btn {
+    text-align: center;
+}
+
+
 #main-footer {
     background: #444;
     color: white;
