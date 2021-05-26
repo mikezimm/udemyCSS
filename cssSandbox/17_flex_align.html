@@ -16,6 +16,21 @@
 
     .flex-container {
       display: flex;
+      flex-direction: row;
+
+      /* Cross axis align */
+      /* Alignment is put on the container and applies to all items */
+      /* items options:  center, start, end */
+      /* items options:  stretch expands items to fill the cross-axis */
+      /* align-self on an item will over-ride align-items */
+      align-items: center; 
+
+      /* Main axis align */
+      /* justify-content : flex-start, flex-end, center, space-between etc... */
+      justify-content: center;
+      
+      background: gray;
+      height: 50vh;
       /* flex-direction: column; */
       /* flex-wrap: wrap; */
     } 
@@ -29,7 +44,7 @@
       border-radius: 10px;
 
       /* flex:  grow shrink basis */
-      flex: 1;
+      /* flex: 1; */
 
       /* flex can take 3 values:  grow shrink basis */
       /* flex: 1 0 200px */
@@ -37,26 +52,18 @@
       /* width: 200px; */
     }
 
-    .item-3 {
-      flex: 2;
-    }
-
     .item-1 {
-      /* Forces this one not to shrink */
-      /* flex-shrink: 0; */
+      /* align-self on an item align-items from the items in container */
+      align-self: flex-start;
     }
+
     .item-2 {
-      /* flex-grow: 1; */
-      /* flex-basis:  kind of like setting the width */
-      /* flex-basis: 300; */
+      /* align-self: flex-start; */
     }
+
     .item-3 {
-      /* flex-grow: 2; */
-      /* flex-basis:  kind of like setting the width */
-      /* flex-basis: 0; */
+      align-self: flex-end;
     }
-
-
 
 
   </style>
