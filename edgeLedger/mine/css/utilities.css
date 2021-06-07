@@ -1,0 +1,45 @@
+/* Text colors */
+
+.text-primary {
+  color: #28a745;
+}
+
+.text-secondary {
+  color: #0284d0;
+}
+
+/* Button standards */
+.btn {
+  cursor: pointer;
+  /* display: inline-block because links are normally just inline */
+  display: inline-block;
+  padding: 10px 30px;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #28a745;
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: #0284d0;
+}
+
+.btn-dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn-light {
+  background-color: #fff;
+  color: #333;
+}
