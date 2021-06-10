@@ -92,7 +92,26 @@ img {
 
 /* Header */
 .hero {
-  background: url('../images/home/showcase.jpg') no-repeat center center/cover;
+  /* This is Brad's original code for the background - overlay is separate */
+  /* background: url('../images/home/showcase.jpg') no-repeat center center/cover; */
+
+
+  /* This was recommended as cleaner implimentation:  https://www.udemy.com/course/modern-html-css-from-the-beginning/learn/lecture/13285438#questions/15061974 */
+
+  /* The Brad overlay technic is old and outdated. Guess this video is old. See a better solution.
+      Adekunle Saheed · Lecture 53 · 6 days ago
+      Background-color should not be on top of background-image it is a bad practices placing them on top of one another. This is why we have gradient, we can place gradient on top of background-color and background-image to achieve the same visual effect of adding black color and opacity together in a more simple way.
+
+      The technic Brad used is too long and too complex because you need to remember to add positioning relative to parent element and create pseudo selector for the child element with positioning absolute and then finally use z-index in a wildcard selector for the parent element. This is a wet codes and too long.
+
+      We can solve this problem and achieve same visual effect just inside one element which is the target element (hero class) with one line of codes.
+
+
+
+      Now our CSS codes will look this and this is all what you need: */
+
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/home/showcase.jpg") no-repeat center center/cover;
+
   height: 100vh;
 
   /* per 1:23 in 53. Hero Section & Overlay, position will be explained in Overlay commentary */
@@ -132,3 +151,25 @@ header .content {
 }
 
 /* BE SURE TO COME BACK AND SEARCH COURSE FOR HERO QUESTIONS */
+
+/* ::before or ::after allows you to insert content before or after the element... NOTE the double :: */
+
+/* THIS ENTIRE BLOCK and the z-index is to create a dark overlay */
+.removedhero::before {
+  /* Can put text in content */
+  content: '';
+
+  /* For Overlay: */
+  /* here we want to position this absolute within the parent AND the parent, needs to be position: relative to work on the next element:  .hero*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* this background will create a black overlay at 0.6 opacity, but also adds overlay to text and buttons (without a z-index) */
+  background:rgba(0,0,0,0.6);
+}
+
+.removedhero * {
+  z-index: 10;
+}
