@@ -107,10 +107,9 @@ img {
       We can solve this problem and achieve same visual effect just inside one element which is the target element (hero class) with one line of codes.
 
 
-
       Now our CSS codes will look this and this is all what you need: */
 
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/home/showcase.jpg") no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(24, 23, 23, 0.8)), url("../images/home/showcase.jpg") no-repeat center center/cover;
 
   height: 100vh;
 
@@ -150,6 +149,38 @@ header .content {
   margin: 20px 0 30px;
 }
 
+/* Icons */
+.icons {
+  padding: 30px;
+}
+
+.icons h3 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.icons i {
+  background-color: #28a745;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.flex-items {
+  /* padding: 20px 50px; */
+  display: flex;
+  align-items: center;
+  /* Main axis - to put each on opposite sides */
+  justify-content: space-between;
+}
+
+/* Move all hero content forward in front of the overlay */
+/* Removed this section because it's not needed with linear gradient overlay */
+/* .hero * {
+  z-index: 10;
+} */
+
+
 /* BE SURE TO COME BACK AND SEARCH COURSE FOR HERO QUESTIONS */
 
 /* ::before or ::after allows you to insert content before or after the element... NOTE the double :: */
@@ -167,7 +198,7 @@ header .content {
   width: 100%;
   height: 100%;
   /* this background will create a black overlay at 0.6 opacity, but also adds overlay to text and buttons (without a z-index) */
-  background:rgba(0,0,0,0.6);
+  background:rgba(0,0,0,0.8);
 }
 
 .removedhero * {
